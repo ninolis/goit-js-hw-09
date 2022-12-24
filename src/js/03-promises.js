@@ -24,11 +24,9 @@ function onFormSubmit(e) {
   if (checkInput(promiseData)) {
     let { delay, step, amount } = promiseData;
     [delay, step, amount] = [delay, step, amount].map(Number);
-
-    console.log(typeof delay, delay);
-    console.log(typeof step, step);
     let currentDelay;
     let currentPosition;
+
     for (let i = 0; i < amount; i += 1) {
       currentDelay = delay + step * i;
       currentPosition = i + 1;
